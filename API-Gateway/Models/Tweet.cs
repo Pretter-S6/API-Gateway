@@ -9,14 +9,17 @@ namespace API_Gateway.Models
     {
         public Tweet()
         {
-            reactions = new List<string>();
+            reactions = new List<Reaction>();
+            likes = new List<Like>();
+            user = new User();
         }
 
         public int tweetID { get; set; }
         public string text { get; set; }
         public DateTime uploadTime { get; set; }
-        public List<User> likes { get; set; }
-        public List<string> reactions { get; set; }
+        public User user { get; set; }
+        public List<Like> likes { get; set; }
+        public List<Reaction> reactions { get; set; }
 
 
     }

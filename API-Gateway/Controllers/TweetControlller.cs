@@ -4,6 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using API_Gateway.Models;
+using System.Net.Http;
 
 namespace API_Gateway.Controllers
 {
@@ -20,10 +23,18 @@ namespace API_Gateway.Controllers
         }
 
         [HttpGet]
-        public string Get()
+        public async Task<List<Tweet>> getAll()
         {
-            string test = "test";
-            return test;
+            List<Tweet> tweetList = new List<Tweet>();
+            using (var httpClient = new HttpClient())
+            {
+                using (var response = await httpClient.GetAsync("https://localhost:44388/test"))
+                {
+                    string apiResponse = await response.Content.ReadAsStringAsync();
+                    tweetList = JsonConvert.DeserializeObject<List<Tweet>>(apiResponse);
+                }
+            }
+            return tweetList;
         }
     }
 }
