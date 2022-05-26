@@ -2,10 +2,14 @@
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
+    "environmentVariables": {
+      "ASPNETCORE_ENVIRONMENT": "Development"
+    },
     "iisExpress": {
       "applicationUrl": "http://localhost:62348",
       "sslPort": 44304
     }
+
   },
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
@@ -14,7 +18,7 @@
       "launchBrowser": true,
       "launchUrl": "",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Production"
       }
     },
     "API_Gateway": {
@@ -31,7 +35,10 @@
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/",
       "publishAllPorts": true,
-      "useSSL": true
+      "useSSL": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Production"
+      }
     }
   }
 }

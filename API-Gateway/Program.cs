@@ -20,11 +20,15 @@ namespace API_Gateway
             Host.CreateDefaultBuilder(args)
             .ConfigureAppConfiguration((host, config) =>
             {
-                config.AddJsonFile($"ocelot.json", false, true);
+                config
+                        .SetBasePath(host.HostingEnvironment.ContentRootPath)
+                        .AddJsonFile($"appsettings.{host.HostingEnvironment.EnvironmentName}.json", true, true)
+                        .AddJsonFile($"ocelot.{host.HostingEnvironment.EnvironmentName}.json", false, true)
+                        .AddEnvironmentVariables();
             })
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<Startup>();
+            });
     }
 }

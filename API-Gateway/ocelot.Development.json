@@ -1,0 +1,19 @@
+{
+  "Routes": [
+    {
+      "DownStreamPathTemplate": "/user",
+      "DownStreamScheme": "https",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "10.152.183.151",
+          "Port": 80
+        }
+      ],
+      "UpStreamPathTemplate": "/api/user",
+      "UpStreamHttpMethod": []
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://10.152.183.184:80"
+  }
+}
