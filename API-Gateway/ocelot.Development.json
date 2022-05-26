@@ -11,6 +11,19 @@
       ],
       "UpStreamPathTemplate": "/api/user",
       "UpStreamHttpMethod": []
+    },
+    {
+      "DownStreamPathTemplate": "/login?{evertyhing}",
+      "DownStreamScheme": "https",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44370
+        }
+      ],
+      "UpStreamPathTemplate": "/api/login?{evertyhing}",
+      "UpStreamHttpMethod": [],
+      "RouteIsCaseSensitive": true
     }
   ],
   "GlobalConfiguration": {
