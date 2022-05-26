@@ -28,6 +28,19 @@ namespace API_Gateway
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddOcelot();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    builder =>
+                    {
+                        builder
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+            
+                    });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,6 +53,8 @@ namespace API_Gateway
 
             app.UseHttpsRedirection();
 
+            app.UseCors("AllowAll");
+
             app.UseRouting();
 
             app.UseAuthorization();
@@ -49,7 +64,7 @@ namespace API_Gateway
                 endpoints.MapControllers();
             });
 
-            app.UseOcelot().Wait();
+            app.UseOcelot().Wait();     
         }
     }
 }
