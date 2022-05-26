@@ -2,11 +2,11 @@
   "Routes": [
     {
       "DownStreamPathTemplate": "/user",
-      "DownStreamScheme": "https",
+      "DownStreamScheme": "http",
       "DownStreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 44370
+          "Host": "10.152.183.151",
+          "Port": 80
         }
       ],
       "UpStreamPathTemplate": "/api/user",
@@ -14,6 +14,6 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:44304"
+    "BaseUrl": "https://10.152.183.184:80"
   }
 }
