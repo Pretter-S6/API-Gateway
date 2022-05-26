@@ -14,7 +14,7 @@
     },
     {
       "DownStreamPathTemplate": "/login?{evertyhing}",
-      "DownStreamScheme": "https",
+      "DownStreamScheme": "http",
       "DownStreamHostAndPorts": [
         {
           "Host": "10.152.183.151",
