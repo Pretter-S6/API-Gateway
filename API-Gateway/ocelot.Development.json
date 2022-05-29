@@ -13,6 +13,18 @@
       "UpStreamHttpMethod": []
     },
     {
+      "DownStreamPathTemplate": "/tweets",
+      "DownStreamScheme": "https",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44388
+        }
+      ],
+      "UpStreamPathTemplate": "/api/tweets",
+      "UpStreamHttpMethod": []
+    },
+    {
       "DownStreamPathTemplate": "/login?{evertyhing}",
       "DownStreamScheme": "https",
       "DownStreamHostAndPorts": [
