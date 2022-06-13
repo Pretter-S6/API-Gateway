@@ -39,6 +39,6 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://10.152.183.30:80"
+    "BaseUrl": "https://10.152.183.252:443"
   }
 }
