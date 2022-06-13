@@ -2,10 +2,10 @@
   "Routes": [
     {
       "DownStreamPathTemplate": "/user",
-      "DownStreamScheme": "http",
+      "DownStreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
-          "Host": "10.152.183.151",
+          "Host": "10.152.183.245",
           "Port": 80
         }
       ],
@@ -17,7 +17,7 @@
       "DownStreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
-          "Host": "10.152.183.207",
+          "Host": "10.152.183.50",
           "Port": 80
         }
       ],
@@ -26,10 +26,10 @@
     },
     {
       "DownStreamPathTemplate": "/login?{evertyhing}",
-      "DownStreamScheme": "http",
+      "DownStreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
-          "Host": "10.152.183.151",
+          "Host": "10.152.183.245",
           "Port": 80
         }
       ],
@@ -39,6 +39,6 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://10.152.183.184:80"
+    "BaseUrl": "https://10.152.183.30:80"
   }
 }
